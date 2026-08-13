@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Swatchr: Color Picker</title>
+<meta name="description" content="Tap any color from your camera or photos and get instant hex, RGB, HSL, and CMYK codes. One tap copies to your clipboard. No account, no backend, no tracking.">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<style>
+  :root { color-scheme: light dark; --accent: #7C3AED; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    max-width: 42rem;
+    margin: 0 auto;
+    padding: 3.5rem 1.5rem 5rem;
+    line-height: 1.6;
+    color: #1a1a1a;
+    background: #fff;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e8e8e8; background: #111; }
+    a { color: #b794f6; }
+    .feature { background: #1c1c1c; border-color: #333; }
+    footer { border-top-color: #2a2a2a; }
+  }
+  a { color: var(--accent); }
+
+  header.hero { text-align: center; margin-bottom: 3rem; }
+  .logo {
+    width: 96px;
+    height: 96px;
+    border-radius: 22px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    margin-bottom: 1.25rem;
+  }
+  h1 { font-size: 1.9rem; margin: 0 0 0.4rem; }
+  .tagline { color: #767676; font-size: 1.05rem; margin: 0 0 1.75rem; }
+
+  .store-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 999px;
+    transition: opacity 0.15s ease;
+  }
+  .store-badge:hover { opacity: 0.88; }
+
+  h2.section-title {
+    font-size: 1.2rem;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .features {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.75rem;
+  }
+  .feature {
+    background: #f6f6f6;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+  }
+  .feature strong { display: block; margin-bottom: 0.2rem; }
+  .feature span { color: #767676; font-size: 0.92rem; }
+
+  footer {
+    margin-top: 4rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e0e0e0;
+    color: #767676;
+    font-size: 0.85rem;
+  }
+  footer nav { margin-bottom: 0.5rem; }
+  footer nav a { color: inherit; text-decoration: underline; margin-right: 1.25rem; }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <img class="logo" src="assets/logo.png" alt="Swatchr app icon">
+  <h1>Swatchr: Color Picker</h1>
+  <p class="tagline">Pick any color from your camera or photos. Copy hex, RGB, HSL, and CMYK in one tap.</p>
+  <a class="store-badge" href="https://apps.apple.com/app/apple-store/id6798627720" aria-label="Download Swatchr on the App Store">
+    Download on the App Store
+  </a>
+</header>
+
+<h2 class="section-title">Key features</h2>
+<ul class="features">
+  <li class="feature">
+    <strong>Live camera picker</strong>
+    <span>Drag the crosshair over anything in view and watch the color sample update live.</span>
+  </li>
+  <li class="feature">
+    <strong>Pick from photos</strong>
+    <span>Tap any point in a saved photo to lift its exact color.</span>
+  </li>
+  <li class="feature">
+    <strong>Every format, one tap</strong>
+    <span>Hex, RGB, HSL, and CMYK are all shown at once — tap any of them to copy.</span>
+  </li>
+  <li class="feature">
+    <strong>Save, widget, export</strong>
+    <span>Unlock an unlimited saved palette, a Home Screen widget for your last color, and shareable export cards.</span>
+  </li>
+</ul>
+
+<footer>
+  <nav>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="mailto:neilbrazil83+apps@gmail.com">Support</a>
+  </nav>
+  Swatchr: Color Picker is made by Neil Brazil. Not affiliated with Apple
+  Inc. App Store is a trademark of Apple Inc.
+</footer>
+
+</body>
+</html>
+
