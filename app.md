@@ -169,11 +169,9 @@ rewarded.
 1. **Subtitle.** Use the 30 characters on demand terms the title does not
    already carry. `Hex, RGB & CMYK from Camera` covers three keyword-field
    terms and describes the actual free-tier value.
-2. **Keyword field.** Skip anything already in the name or subtitle — Apple
-   indexes those. Worth including: `identifier`, `finder`, `detector`,
-   `analyzer`, `eyedropper`, `swatch`, `palette`, `colour`, `hsl`, `code`,
-   `pixel`, `designer`. `rgb color detector` (difficulty 13) and
-   `free color identifier` (difficulty 17) are the softest targets found.
+2. **Keyword field.** Superseded by the revised priority list in the Astro
+   tracking baseline below — the `colour` spelling turned out to matter far more
+   than this first pass assumed. Read that section instead.
 3. **Do not chase `pantone` or `color wheel`.** The first is a licensed system
    the app cannot serve, the second is difficulty 43 for popularity 7.
 4. **The conversion blocker is rating count, not keywords.** Nothing ranks
@@ -184,6 +182,66 @@ rewarded.
 5. **Re-run this research after release.** Astro `search_app_store` with
    `appId: 6798627720` will show actual ranking positions, which the
    pre-release data cannot.
+
+---
+
+## Astro tracking baseline (2026-08-27)
+
+111 keywords added to Astro against appId 6798627720: **58 on `us`, 53 on `gb`**.
+The GB set uses "colour" spellings; the US set carries both.
+
+**Every keyword currently ranks 1000 (unranked).** That is not a problem, it is
+the baseline: the app is approved but unreleased, so it is not in the index yet.
+The first meaningful read comes a few days after release.
+
+### The "colour" spelling finding — this changes the keyword-field advice
+
+In the **US** store, `colour picker` scores popularity **17** against
+`color picker`'s **6**. `colour palette` scores 16 at difficulty 17, where
+`color palette` scores 26 at difficulty 42. The British spelling is searched
+more, and is easier, in the American store.
+
+The likely cause is non-US English speakers searching a US-region account, but
+the cause matters less than the effect: **`colour` earns a slot in the keyword
+field even though the listing is US-facing.** My earlier recommendation listed
+it as an afterthought. It should be near the front.
+
+### Best demand-to-difficulty, US
+
+| Keyword | Popularity | Difficulty |
+|---|---|---|
+| color detector | 17 | 13 |
+| rgb color detector | 16 | 13 |
+| free color identifier | 16 | 17 |
+| colour picker | 17 | 17 |
+| colour palette | 16 | 17 |
+| color analyzer | 16 | 21 |
+| color scanner | 24 | 21 |
+| color finder | 19 | 23 |
+
+### Avoid, US (difficulty out of proportion to demand)
+
+`color widget` 69 · `pixel color` 67 · `color match` 62 · `swatch` 55 ·
+`color matcher` 46 · `color wheel` 43 · `color swatches` 43 · `color palette` 42 ·
+`hex color` 41 · `color code` 40
+
+`color match` is the one to be most careful about: popularity 42 is the highest
+in the whole set, but difficulty is 62 and the SERP intent is paint matching,
+which Swatchr cannot do. High traffic the app cannot serve is worse than no
+traffic.
+
+### GB is materially softer
+
+Difficulty runs lower across the board: `colour picker` 11, `colour identifier`
+9, `colour finder` 9, `colour analyzer` 5, `colour wheel` 21. If the first
+rankings after release are discouraging in the US, GB is the easier place to
+establish a position first.
+
+### Revised keyword-field priority
+
+`colour`, `detector`, `identifier`, `finder`, `analyzer`, `scanner`, `eyedropper`,
+`hex`, `rgb`, `cmyk`, `hsl`, `swatch`, `palette`, `pixel`, `code`.
+Skip anything already in the app name or subtitle; Apple indexes those already.
 
 ---
 
