@@ -1,6 +1,6 @@
 import { renderToStaticMarkup } from "react-dom/server";
 import { ROUTES, type Route } from "./routes";
-import { abs, APP_ID, url } from "./site";
+import { abs, APP_ID, GOOGLE_SITE_VERIFICATION, url } from "./site";
 
 export { ROUTES };
 export { ORIGIN, BASE, abs } from "./site";
@@ -28,6 +28,7 @@ export function renderRoute(route: Route): string {
 <title>${esc(meta.title)}</title>
 <meta name="description" content="${esc(meta.description)}">
 <link rel="canonical" href="${esc(canonical)}">
+<meta name="google-site-verification" content="${GOOGLE_SITE_VERIFICATION}">
 <meta name="apple-itunes-app" content="app-id=${APP_ID}">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Swatchr">
