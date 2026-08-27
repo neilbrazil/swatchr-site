@@ -3,128 +3,28 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Swatchr: Color Picker</title>
-<meta name="description" content="Tap any color from your camera or photos and get instant hex, RGB, HSL, and CMYK codes. One tap copies to your clipboard. No account, no backend, no tracking.">
-<link rel="icon" type="image/png" href="assets/favicon.png">
-<style>
-  :root { color-scheme: light dark; --accent: #7C3AED; }
-  * { box-sizing: border-box; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    max-width: 42rem;
-    margin: 0 auto;
-    padding: 3.5rem 1.5rem 5rem;
-    line-height: 1.6;
-    color: #1a1a1a;
-    background: #fff;
-  }
-  @media (prefers-color-scheme: dark) {
-    body { color: #e8e8e8; background: #111; }
-    a { color: #b794f6; }
-    .feature { background: #1c1c1c; border-color: #333; }
-    footer { border-top-color: #2a2a2a; }
-  }
-  a { color: var(--accent); }
-
-  header.hero { text-align: center; margin-bottom: 3rem; }
-  .logo {
-    width: 96px;
-    height: 96px;
-    border-radius: 22px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-    margin-bottom: 1.25rem;
-  }
-  h1 { font-size: 1.9rem; margin: 0 0 0.4rem; }
-  .tagline { color: #767676; font-size: 1.05rem; margin: 0 0 1.75rem; }
-
-  .store-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    background: var(--accent);
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.95rem;
-    padding: 0.75rem 1.5rem;
-    border-radius: 999px;
-    transition: opacity 0.15s ease;
-  }
-  .store-badge:hover { opacity: 0.88; }
-
-  h2.section-title {
-    font-size: 1.2rem;
-    margin-top: 3rem;
-    margin-bottom: 1rem;
-  }
-
-  .features {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    gap: 0.75rem;
-  }
-  .feature {
-    background: #f6f6f6;
-    border: 1px solid #e0e0e0;
-    border-radius: 10px;
-    padding: 1rem 1.25rem;
-  }
-  .feature strong { display: block; margin-bottom: 0.2rem; }
-  .feature span { color: #767676; font-size: 0.92rem; }
-
-  footer {
-    margin-top: 4rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid #e0e0e0;
-    color: #767676;
-    font-size: 0.85rem;
-  }
-  footer nav { margin-bottom: 0.5rem; }
-  footer nav a { color: inherit; text-decoration: underline; margin-right: 1.25rem; }
-</style>
+<title>Swatchr — Color Picker for iPhone Camera and Photos</title>
+<meta name="description" content="Pick any color with your iPhone camera or from a photo and copy it as hex, RGB, HSL or CMYK in one tap. Free download, no account, works offline.">
+<link rel="canonical" href="https://neilbrazil.github.io/swatchr-site/">
+<meta name="apple-itunes-app" content="app-id=6798627720">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Swatchr">
+<meta property="og:title" content="Swatchr — Color Picker for iPhone Camera and Photos">
+<meta property="og:description" content="Pick any color with your iPhone camera or from a photo and copy it as hex, RGB, HSL or CMYK in one tap. Free download, no account, works offline.">
+<meta property="og:url" content="https://neilbrazil.github.io/swatchr-site/">
+<meta property="og:image" content="https://neilbrazil.github.io/swatchr-site/assets/icon.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Swatchr — Color Picker for iPhone Camera and Photos">
+<meta name="twitter:description" content="Pick any color with your iPhone camera or from a photo and copy it as hex, RGB, HSL or CMYK in one tap. Free download, no account, works offline.">
+<meta name="twitter:image" content="https://neilbrazil.github.io/swatchr-site/assets/icon.png">
+<meta name="theme-color" content="#0F1E43">
+<link rel="icon" type="image/png" href="/swatchr-site/assets/favicon.png">
+<link rel="apple-touch-icon" href="/swatchr-site/assets/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="/swatchr-site/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Swatchr: Color Picker","alternateName":"Swatchr","applicationCategory":"GraphicsApplication","operatingSystem":"iOS 18 or later","url":"https://neilbrazil.github.io/swatchr-site/","installUrl":"https://apps.apple.com/us/app/swatchr-color-picker/id6798627720","author":{"@type":"Person","name":"Neil Brazil"},"offers":{"@type":"Offer","price":"0","priceCurrency":"USD","description":"Free download. A single one-time in-app purchase unlocks the saved palette, Home Screen widget and export cards."},"screenshot":"https://neilbrazil.github.io/swatchr-site/assets/screens/camera-crosshair-hex.jpg"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I find the hex code of a color in a photo on my iPhone?","acceptedAnswer":{"@type":"Answer","text":"Open the photo in Swatchr, tap the point you want, and the hex code appears with the RGB, HSL and CMYK values underneath. Tap the hex row to copy it. iOS also has a hidden eyedropper in the Markup tool, though it only gives you one value at a time."}},{"@type":"Question","name":"Can I pick a color from my camera instead of a photo?","acceptedAnswer":{"@type":"Answer","text":"Yes. The camera view samples continuously as you drag the crosshair, so you can read the color of a wall, a fabric or a printed sample without photographing it first. Tap to freeze the reading once you have it."}},{"@type":"Question","name":"What is the difference between hex, RGB, HSL and CMYK?","acceptedAnswer":{"@type":"Answer","text":"Hex and RGB describe the same screen color in different notation. HSL splits it into hue, saturation and lightness, which makes manual adjustment much easier. CMYK describes ink coverage for print."}},{"@type":"Question","name":"Does Swatchr give CMYK values for print work?","acceptedAnswer":{"@type":"Answer","text":"It does, on the same readout as everything else. Treat the numbers as a starting point rather than a press-ready spec, because the conversion has no printer profile behind it."}},{"@type":"Question","name":"How do I find a color that goes with the one I picked?","acceptedAnswer":{"@type":"Answer","text":"Swatchr shows three suggestions under each color: the hue rotated 180 degrees, and the two hues 30 degrees either side. Saturation and lightness stay put so the suggestions look related rather than random."}},{"@type":"Question","name":"Can I save colors into a palette?","acceptedAnswer":{"@type":"Answer","text":"The saved palette is part of the one-time unlock. Once it is on, there is no limit on how many colors you keep, and they stay on the device rather than syncing to a server."}},{"@type":"Question","name":"What if I do not know what a color is called?","acceptedAnswer":{"@type":"Answer","text":"Every pick is matched to its nearest CSS color keyword, so a murky yellow-green comes back as Darkolivegreen. It is an approximate match by distance in RGB, which is enough to describe a color to somebody else."}},{"@type":"Question","name":"Is there a Home Screen widget?","acceptedAnswer":{"@type":"Answer","text":"Yes, included in the unlock. The small widget shows your most recent saved color as a filled swatch with its name and code, which is handy when you are working to a palette all week."}},{"@type":"Question","name":"Does Swatchr work without an internet connection?","acceptedAnswer":{"@type":"Answer","text":"Everything runs on the device. There is no account, no sync and no server, so the camera and photo picking both work in airplane mode."}},{"@type":"Question","name":"How much does Swatchr cost?","acceptedAnswer":{"@type":"Answer","text":"The download is free and the camera picking, photo picking and all four format codes are free with no usage limit. Saving to a palette, the widget and export cards are behind a single one-time purchase, not a subscription."}}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Swatchr: Color Picker","url":"https://neilbrazil.github.io/swatchr-site/"}</script>
 </head>
 <body>
-
-<header class="hero">
-  <img class="logo" src="assets/logo.png" alt="Swatchr app icon">
-  <h1>Swatchr: Color Picker</h1>
-  <p class="tagline">Pick any color from your camera or photos. Copy hex, RGB, HSL, and CMYK in one tap.</p>
-  <a class="store-badge" href="https://apps.apple.com/app/apple-store/id6798627720" aria-label="Download Swatchr on the App Store">
-    Download on the App Store
-  </a>
-</header>
-
-<h2 class="section-title">Key features</h2>
-<ul class="features">
-  <li class="feature">
-    <strong>Live camera picker</strong>
-    <span>Drag the crosshair over anything in view and watch the color sample update live.</span>
-  </li>
-  <li class="feature">
-    <strong>Pick from photos</strong>
-    <span>Tap any point in a saved photo to lift its exact color.</span>
-  </li>
-  <li class="feature">
-    <strong>Every format, one tap</strong>
-    <span>Hex, RGB, HSL, and CMYK are all shown at once — tap any of them to copy.</span>
-  </li>
-  <li class="feature">
-    <strong>Save, widget, export</strong>
-    <span>Unlock an unlimited saved palette, a Home Screen widget for your last color, and shareable export cards.</span>
-  </li>
-</ul>
-
-<footer>
-  <nav>
-    <a href="privacy.html">Privacy Policy</a>
-    <a href="mailto:neilbrazil83+apps@gmail.com">Support</a>
-  </nav>
-  Swatchr: Color Picker is made by Neil Brazil. Not affiliated with Apple
-  Inc. App Store is a trademark of Apple Inc.
-</footer>
-
+<link rel="preload" as="image" href="/swatchr-site/assets/icon.png"/><link rel="preload" as="image" href="/swatchr-site/assets/screens/camera-crosshair-hex.jpg" fetchPriority="high"/><header class="site-head"><a class="brand" href="/swatchr-site/"><img src="/swatchr-site/assets/icon.png" alt="" width="36" height="36" class="brand-mark"/><span>Swatchr</span></a><nav class="site-nav" aria-label="Primary"><a href="/swatchr-site/#features">Features</a><a href="/swatchr-site/guides/">Guides</a><a href="/swatchr-site/#faq">FAQ</a></nav></header><main><section class="hero"><div class="hero-copy"><img class="hero-icon" src="/swatchr-site/assets/icon.png" alt="" width="88" height="88"/><h1>Color picker for your iPhone camera and photos</h1><p class="lede">Point Swatchr at anything and read its color as hex, RGB, HSL and CMYK on one card. Tap the format you need and it goes to the clipboard.</p><a class="store-badge" href="https://apps.apple.com/us/app/swatchr-color-picker/id6798627720" aria-label="Download Swatchr on the App Store"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M16.4 12.7c0-2.2 1.8-3.3 1.9-3.3-1-1.5-2.6-1.7-3.2-1.7-1.4-.1-2.7.8-3.3.8-.7 0-1.7-.8-2.8-.8-1.5 0-2.8.8-3.6 2.1-1.5 2.7-.4 6.6 1.1 8.8.7 1 1.6 2.2 2.7 2.2 1.1 0 1.5-.7 2.8-.7s1.6.7 2.8.7c1.1 0 1.9-1.1 2.6-2.1.8-1.2 1.2-2.4 1.2-2.4s-2.2-.9-2.2-3.6zM14.3 5.9c.6-.7 1-1.7.9-2.7-.9 0-2 .6-2.6 1.3-.6.6-1.1 1.7-.9 2.6 1 .1 2-.5 2.6-1.2z"></path></svg>Download on the App Store</a><p class="hero-note">Free download. iOS 18 or later. No account, works offline.</p></div><div class="hero-shot"><figure class="shot"><img src="/swatchr-site/assets/screens/camera-crosshair-hex.jpg" alt="Swatchr&#x27;s live camera color picker with the crosshair on a sunflower petal, naming the color Darkkhaki and listing #CCC353, rgb(204, 195, 83), hsl(56, 54%, 56%) and cmyk(0%, 4%, 59%, 20%)" width="552" height="1200" loading="eager" fetchPriority="high"/><figcaption>Drag the crosshair anywhere in the viewfinder. The readout updates as you move.</figcaption></figure></div></section><section id="features" class="band"><h2>What Swatchr does</h2><ul class="feature-grid"><li class="feature"><h3>Live camera picker</h3><p>Drag the crosshair over anything the camera can see. The color reads out as you move, so you can hunt for the exact shade instead of taking a photo and hoping.</p></li><li class="feature"><h3>Pick from your photo library</h3><p>Open any saved image and tap a point in it. Useful for screenshots, product photos and reference shots taken months ago.</p></li><li class="feature"><h3>Four formats, always visible</h3><p>Hex, RGB, HSL and CMYK sit on screen together. Tap the one you need and it goes to the clipboard. No format switcher, no menu.</p></li><li class="feature"><h3>A name for every color</h3><p>Each pick is matched to the nearest of the 140-odd CSS color keywords, so you get Cadetblue or Rosybrown rather than only a six-digit code.</p></li><li class="feature"><h3>Harmony suggestions</h3><p>Alongside each color you get its opposite on the wheel and the two neighbors 30 degrees either side, all with their own hex codes.</p></li><li class="feature"><h3>Saved palette, widget and export</h3><p>The one-time unlock adds an unlimited saved palette, a Home Screen widget showing your latest color, and export cards you can share.</p></li></ul></section><section id="how" class="band"><h2>How it works</h2><ol class="steps"><li><span class="step-n" aria-hidden="true">1</span><h3>Open the camera or a photo</h3><p>Two buttons on the first screen. Nothing to set up, no account to make.</p></li><li><span class="step-n" aria-hidden="true">2</span><h3>Move the crosshair</h3><p>Drag it over the color you want. Tap once to freeze the reading so a shaky hand doesn&#x27;t lose it.</p></li><li><span class="step-n" aria-hidden="true">3</span><h3>Tap the code you need</h3><p>Hex for CSS, RGB for most design tools, HSL for tweaking, CMYK for anything heading to print.</p></li></ol></section><section id="screens" class="band"><h2>A look at the app</h2><div class="shot-row"><figure class="shot"><img src="/swatchr-site/assets/screens/photo-color-picker.jpg" alt="Picking a color from a saved photo of fabric bolts in Swatchr, returning Indianred #B0385E with its RGB, HSL and CMYK codes" width="552" height="1200" loading="lazy"/><figcaption>Photos work the same way. Tap a point in any image from your library.</figcaption></figure><figure class="shot"><img src="/swatchr-site/assets/screens/saved-palette.jpg" alt="The Swatchr home screen showing Camera and Photo buttons above a saved palette grid of named swatches including Indianred, Darkblue, Cadetblue and Sienna with their hex codes" width="552" height="1200" loading="lazy"/><figcaption>Saved colors sit in a grid, each with its name and hex code under the swatch.</figcaption></figure><figure class="shot"><img src="/swatchr-site/assets/screens/complementary-colors.jpg" alt="A saved Swatchr color called Olive, #949D0E, with three suggested harmony colors beneath it and their own hex codes" width="552" height="1200" loading="lazy"/><figcaption>Every color comes with its opposite on the wheel plus the two shades either side of it.</figcaption></figure><figure class="shot"><img src="/swatchr-site/assets/screens/home-screen-widget.jpg" alt="An iPhone Home Screen with the Swatchr widget showing the saved color Olive as a filled swatch with its hex code" width="552" height="1200" loading="lazy"/><figcaption>The widget shows your most recent saved color without opening the app.</figcaption></figure><figure class="shot"><img src="/swatchr-site/assets/screens/export-color-card.jpg" alt="Swatchr&#x27;s export screen turning the saved color Indianred into a shareable card listing #B83760 with its RGB, HSL and CMYK values" width="552" height="1200" loading="lazy"/><figcaption>Export any saved color as an image you can drop into a message or a brief.</figcaption></figure></div></section><section id="guides" class="band"><h2>Guides</h2><p class="band-lede">Short, practical answers to the color questions that send people looking for an app in the first place.</p><div class="guide-grid"><a class="guide-card" href="/swatchr-site/guides/how-to-find-hex-code-from-photo-iphone/"><img class="guide-card-img" src="/swatchr-site/assets/guides/how-to-find-hex-code-from-photo-iphone-feature.webp" alt="Horizontal color bands of varying widths on a deep navy background" width="1536" height="1024" loading="lazy"/><div class="guide-card-body"><h3>How to Find the Hex Code of a Color in a Photo on iPhone</h3><p>Three ways to pull a hex code out of a photo on iPhone, including the eyedropper hidden in iOS Markup and a faster route that gives you RGB, HSL and CMYK at the same time.</p><span class="guide-card-more">Read the guide</span></div></a><a class="guide-card" href="/swatchr-site/guides/pick-a-color-with-your-iphone-camera/"><img class="guide-card-img" src="/swatchr-site/assets/guides/pick-a-color-with-your-iphone-camera-feature.webp" alt="Soft blurred discs of teal, green and violet drifting across a dark blue field" width="1536" height="1024" loading="lazy"/><div class="guide-card-body"><h3>How to Pick a Color With Your iPhone Camera</h3><p>Use your iPhone camera as a live eyedropper to read the color of a wall, fabric or printed sample, and get a hex code without taking a photo first.</p><span class="guide-card-more">Read the guide</span></div></a><a class="guide-card" href="/swatchr-site/guides/hex-rgb-hsl-cmyk-color-codes-explained/"><img class="guide-card-img" src="/swatchr-site/assets/guides/hex-rgb-hsl-cmyk-color-codes-explained-feature.webp" alt="A grid of violet and magenta swatch tiles with a few cells left empty" width="1536" height="1024" loading="lazy"/><div class="guide-card-body"><h3>Hex, RGB, HSL and CMYK: Which Color Code Should You Use?</h3><p>What hex, RGB, HSL and CMYK actually describe, how they relate to each other, and which one to reach for when you are writing CSS, working in a design tool or sending a file to print.</p><span class="guide-card-more">Read the guide</span></div></a><a class="guide-card" href="/swatchr-site/guides/get-cmyk-values-from-a-photo/"><img class="guide-card-img" src="/swatchr-site/assets/guides/get-cmyk-values-from-a-photo-feature.webp" alt="A staircase of blue bars stepping from dark to light across a dark ground" width="1536" height="1024" loading="lazy"/><div class="guide-card-body"><h3>How to Get CMYK Values From a Color in a Photo</h3><p>Read the CMYK breakdown of any color from a photo or your camera, and understand why the numbers are a starting point for print rather than a press-ready specification.</p><span class="guide-card-more">Read the guide</span></div></a><a class="guide-card" href="/swatchr-site/guides/find-complementary-colors-for-any-color/"><img class="guide-card-img" src="/swatchr-site/assets/guides/find-complementary-colors-for-any-color-feature.webp" alt="A pink field and a green field facing each other across a narrow gap" width="1536" height="1024" loading="lazy"/><div class="guide-card-body"><h3>How to Find Complementary Colors for Any Color</h3><p>Find the complement of any color by rotating its hue 180 degrees, plus the analogous shades either side, with the hex codes worked out for you.</p><span class="guide-card-more">Read the guide</span></div></a><a class="guide-card" href="/swatchr-site/guides/save-a-color-palette-on-iphone/"><img class="guide-card-img" src="/swatchr-site/assets/guides/save-a-color-palette-on-iphone-feature.webp" alt="Nested rounded rectangles stepping from blue to magenta, anchored to the lower right" width="1536" height="1024" loading="lazy"/><div class="guide-card-body"><h3>How to Save a Color Palette on iPhone</h3><p>Keep the colors you pick in a palette on your iPhone, organize them by name and hex code, and get at them again without a screenshot folder or a notes file.</p><span class="guide-card-more">Read the guide</span></div></a><a class="guide-card" href="/swatchr-site/guides/identify-a-color-you-cant-name/"><img class="guide-card-img" src="/swatchr-site/assets/guides/identify-a-color-you-cant-name-feature.webp" alt="Color-wheel segments of uneven length radiating from an off-center hub" width="1536" height="1024" loading="lazy"/><div class="guide-card-body"><h3>How to Identify a Color You Can&#x27;t Name</h3><p>Put a name to a color you can only point at, using the standard CSS color keywords, and get the hex code that goes with it.</p><span class="guide-card-more">Read the guide</span></div></a><a class="guide-card" href="/swatchr-site/guides/iphone-color-picker-widget/"><img class="guide-card-img" src="/swatchr-site/assets/guides/iphone-color-picker-widget-feature.webp" alt="Broad diagonal ribbons in magenta, red and gold crossing a dark blue frame" width="1536" height="1024" loading="lazy"/><div class="guide-card-body"><h3>Put a Color Picker Widget on Your iPhone Home Screen</h3><p>Add a Home Screen widget that shows your most recent saved color as a filled swatch with its name and code, so the palette you are working to is always visible.</p><span class="guide-card-more">Read the guide</span></div></a></div></section><section id="faq" class="band"><h2>Questions</h2><div class="faq"><details class="faq-item" open=""><summary>How do I find the hex code of a color in a photo on my iPhone?</summary><div class="faq-answer"><p>Open the photo in Swatchr, tap the point you want, and the hex code appears with the RGB, HSL and CMYK values underneath. Tap the hex row to copy it. iOS also has a hidden eyedropper in the Markup tool, though it only gives you one value at a time.</p><p><a href="/swatchr-site/guides/how-to-find-hex-code-from-photo-iphone/">Learn more</a></p></div></details><details class="faq-item"><summary>Can I pick a color from my camera instead of a photo?</summary><div class="faq-answer"><p>Yes. The camera view samples continuously as you drag the crosshair, so you can read the color of a wall, a fabric or a printed sample without photographing it first. Tap to freeze the reading once you have it.</p><p><a href="/swatchr-site/guides/pick-a-color-with-your-iphone-camera/">Learn more</a></p></div></details><details class="faq-item"><summary>What is the difference between hex, RGB, HSL and CMYK?</summary><div class="faq-answer"><p>Hex and RGB describe the same screen color in different notation. HSL splits it into hue, saturation and lightness, which makes manual adjustment much easier. CMYK describes ink coverage for print.</p><p><a href="/swatchr-site/guides/hex-rgb-hsl-cmyk-color-codes-explained/">Learn more</a></p></div></details><details class="faq-item"><summary>Does Swatchr give CMYK values for print work?</summary><div class="faq-answer"><p>It does, on the same readout as everything else. Treat the numbers as a starting point rather than a press-ready spec, because the conversion has no printer profile behind it.</p><p><a href="/swatchr-site/guides/get-cmyk-values-from-a-photo/">Learn more</a></p></div></details><details class="faq-item"><summary>How do I find a color that goes with the one I picked?</summary><div class="faq-answer"><p>Swatchr shows three suggestions under each color: the hue rotated 180 degrees, and the two hues 30 degrees either side. Saturation and lightness stay put so the suggestions look related rather than random.</p><p><a href="/swatchr-site/guides/find-complementary-colors-for-any-color/">Learn more</a></p></div></details><details class="faq-item"><summary>Can I save colors into a palette?</summary><div class="faq-answer"><p>The saved palette is part of the one-time unlock. Once it is on, there is no limit on how many colors you keep, and they stay on the device rather than syncing to a server.</p><p><a href="/swatchr-site/guides/save-a-color-palette-on-iphone/">Learn more</a></p></div></details><details class="faq-item"><summary>What if I do not know what a color is called?</summary><div class="faq-answer"><p>Every pick is matched to its nearest CSS color keyword, so a murky yellow-green comes back as Darkolivegreen. It is an approximate match by distance in RGB, which is enough to describe a color to somebody else.</p><p><a href="/swatchr-site/guides/identify-a-color-you-cant-name/">Learn more</a></p></div></details><details class="faq-item"><summary>Is there a Home Screen widget?</summary><div class="faq-answer"><p>Yes, included in the unlock. The small widget shows your most recent saved color as a filled swatch with its name and code, which is handy when you are working to a palette all week.</p><p><a href="/swatchr-site/guides/iphone-color-picker-widget/">Learn more</a></p></div></details><details class="faq-item"><summary>Does Swatchr work without an internet connection?</summary><div class="faq-answer"><p>Everything runs on the device. There is no account, no sync and no server, so the camera and photo picking both work in airplane mode.</p></div></details><details class="faq-item"><summary>How much does Swatchr cost?</summary><div class="faq-answer"><p>The download is free and the camera picking, photo picking and all four format codes are free with no usage limit. Saving to a palette, the widget and export cards are behind a single one-time purchase, not a subscription.</p></div></details></div></section><section class="band cta-band"><h2>Get Swatchr</h2><p>The camera picking, the photo picking and all four format codes are free with no usage limit. One purchase adds the saved palette, the widget and export cards.</p><a class="store-badge" href="https://apps.apple.com/us/app/swatchr-color-picker/id6798627720" aria-label="Download Swatchr on the App Store"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M16.4 12.7c0-2.2 1.8-3.3 1.9-3.3-1-1.5-2.6-1.7-3.2-1.7-1.4-.1-2.7.8-3.3.8-.7 0-1.7-.8-2.8-.8-1.5 0-2.8.8-3.6 2.1-1.5 2.7-.4 6.6 1.1 8.8.7 1 1.6 2.2 2.7 2.2 1.1 0 1.5-.7 2.8-.7s1.6.7 2.8.7c1.1 0 1.9-1.1 2.6-2.1.8-1.2 1.2-2.4 1.2-2.4s-2.2-.9-2.2-3.6zM14.3 5.9c.6-.7 1-1.7.9-2.7-.9 0-2 .6-2.6 1.3-.6.6-1.1 1.7-.9 2.6 1 .1 2-.5 2.6-1.2z"></path></svg>Download on the App Store</a></section></main><footer class="site-foot"><nav aria-label="Footer"><a href="/swatchr-site/">Home</a><a href="/swatchr-site/guides/">Guides</a><a href="/swatchr-site/privacy/">Privacy Policy</a><a href="mailto:neilbrazil83+apps@gmail.com">Support</a></nav><p>Swatchr: Color Picker is made by Neil Brazil. Not affiliated with Apple Inc. App Store is a trademark of Apple Inc.</p></footer>
 </body>
 </html>
-

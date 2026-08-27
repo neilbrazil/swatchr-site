@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /swatchr-site/landing/
+
+Sitemap: https://neilbrazil.github.io/swatchr-site/sitemap.xml
