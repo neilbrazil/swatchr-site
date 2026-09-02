@@ -256,3 +256,53 @@ Skip anything already in the app name or subtitle; Apple indexes those already.
   any future submission.
 - The sitemap must be submitted in Google Search Console after deploy; nothing
   in the build does that.
+
+---
+
+## Search Console notes (2026-09-02)
+
+Sitemap reported "Couldn't fetch" / "Unknown type" shortly after submission.
+
+**The sitemap file is not the problem.** Verified against the live URL:
+HTTP 200, `content-type: application/xml`, no BOM, well-formed XML in the
+correct `sitemaps.org/schemas/sitemap/0.9` namespace, 11 `<loc>` entries all
+resolving to real pages, and a clean 200 when fetched with a Googlebot user
+agent. "Couldn't fetch" on GitHub Pages is very commonly a stale status in the
+hours after first submission rather than a real fetch failure.
+
+**Check the submission field first.** For a URL-prefix property of
+`https://neilbrazil.github.io/swatchr-site/`, the sitemap box wants the path
+relative to that prefix — `sitemap.xml`, not the full URL. Pasting the full URL
+into a field that already carries the prefix produces a doubled path that can
+never resolve. Search Console's URL Inspection tool on the sitemap URL gives the
+real HTTP response Google saw and is far more diagnostic than the Sitemaps tab.
+
+### Structural finding: robots.txt is at the wrong level to be read
+
+Crawlers only ever read robots.txt from the **origin root**. For this site that
+is `https://neilbrazil.github.io/robots.txt`, which returns **404** — there is
+no `neilbrazil.github.io` user-page repo. The `robots.txt` this build writes to
+`/swatchr-site/robots.txt` is never read by anything.
+
+Consequences: the `Sitemap:` directive in it is invisible, and the
+`Disallow: /swatchr-site/landing/` rule is unenforced (source files are
+crawlable). A 404 robots.txt means "crawl everything", so nothing is *blocked*
+— this costs discovery, not access.
+
+This cannot be fixed from inside this repo. Either:
+- create a `neilbrazil.github.io` repo whose root `robots.txt` carries the
+  `Sitemap:` line for every project site, or
+- **move to a custom domain**, which makes the site its own origin and lets its
+  robots.txt work normally.
+
+The second is already the top recommendation in Known gaps for authority
+reasons. This is a second, independent argument for it.
+
+### Fixed in the build
+
+- **`lastmod` was dishonest.** Every page carried the build date, so a CSS tweak
+  claimed all 11 pages had changed. Google discounts `lastmod` it judges
+  unreliable. Now each page's rendered HTML is hashed into
+  `landing/sitemap-lastmod.json` and the date only moves when that hash moves.
+  Commit that file — it is the state the honesty depends on.
+- **`<priority>` removed.** Google ignores it, and `<changefreq>`, entirely.
