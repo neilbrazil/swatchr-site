@@ -1,46 +1,50 @@
 {
   "/": {
-    "hash": "9a9aba8b7870ef42",
-    "date": "2026-08-27"
+    "hash": "a952db195e91a64f",
+    "date": "2026-10-08"
   },
   "/guides/": {
-    "hash": "54dd477b3a448d02",
-    "date": "2026-08-27"
+    "hash": "d8dcb52ef2de74c4",
+    "date": "2026-10-08"
   },
   "/guides/how-to-find-hex-code-from-photo-iphone/": {
-    "hash": "0dcf61e0139b35a8",
-    "date": "2026-08-27"
+    "hash": "252bebc843ae6626",
+    "date": "2026-10-08"
   },
   "/guides/pick-a-color-with-your-iphone-camera/": {
-    "hash": "c38e199735448039",
-    "date": "2026-08-27"
+    "hash": "6de11095a4fa08c1",
+    "date": "2026-10-08"
   },
   "/guides/hex-rgb-hsl-cmyk-color-codes-explained/": {
-    "hash": "f6bd5ea50cc52d91",
-    "date": "2026-08-27"
+    "hash": "cb2dfbac042be551",
+    "date": "2026-10-08"
   },
   "/guides/get-cmyk-values-from-a-photo/": {
-    "hash": "5736ae0aba48459e",
-    "date": "2026-08-27"
+    "hash": "16eca34a55e89222",
+    "date": "2026-10-08"
   },
   "/guides/find-complementary-colors-for-any-color/": {
-    "hash": "ddde6c5fe89f46f5",
-    "date": "2026-08-27"
+    "hash": "0ad781823a6f89f9",
+    "date": "2026-10-08"
   },
   "/guides/save-a-color-palette-on-iphone/": {
-    "hash": "3ee40080b1b16348",
-    "date": "2026-08-27"
+    "hash": "0bfa250ca6008b59",
+    "date": "2026-10-08"
   },
   "/guides/identify-a-color-you-cant-name/": {
-    "hash": "333131c19ee830a6",
-    "date": "2026-08-27"
+    "hash": "552cba5f03c75a4c",
+    "date": "2026-10-08"
   },
   "/guides/iphone-color-picker-widget/": {
-    "hash": "5915f63327aa7fdd",
-    "date": "2026-08-27"
+    "hash": "4cef052ed37003b7",
+    "date": "2026-10-08"
   },
   "/privacy/": {
-    "hash": "f0df8d6da4f485a2",
-    "date": "2026-08-27"
+    "hash": "130295550f546aee",
+    "date": "2026-10-08"
+  },
+  "/terms/": {
+    "hash": "e8edbf11945b5bed",
+    "date": "2026-10-08"
   }
 }

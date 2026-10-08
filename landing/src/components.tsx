@@ -49,6 +49,7 @@ export function Footer() {
         <a href={url("/")}>Home</a>
         <a href={url("guides/")}>Guides</a>
         <a href={url("privacy/")}>Privacy Policy</a>
+        <a href={url("terms/")}>Terms of Use</a>
         <a href={`mailto:${SUPPORT_EMAIL}`}>Support</a>
       </nav>
       <p>

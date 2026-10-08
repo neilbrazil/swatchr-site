@@ -156,4 +156,18 @@ export const privacyMeta = (): PageMeta => ({
   ],
 });
 
+export const termsMeta = (): PageMeta => ({
+  path: "/terms/",
+  title: "Terms of Use — Swatchr",
+  description:
+    "Swatchr is licensed under Apple's Standard EULA. Swatchr Pro is a one-time, non-consumable purchase that never renews.",
+  image: abs("assets/icon.png"),
+  jsonld: [
+    breadcrumbs([
+      { name: "Home", path: "/" },
+      { name: "Terms of Use", path: "/terms/" },
+    ]),
+  ],
+});
+
 export { APP_ID };
